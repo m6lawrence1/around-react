@@ -1,0 +1,13 @@
+@import url('./__avatar/button__avatar.css');
+@import url('./__edit/button__edit.css');
+@import url('./__add/button__add.css');
+@import url('./__like/button__like.css');
+@import url('./__like/_status/button__like_status_selected.css');
+@import url('./__delete/button__delete.css');
+
+
+.button:hover{
+    opacity: .6;
+    transition: 1s;
+    cursor: pointer;
+}

@@ -1,0 +1,29 @@
+.profile__name{
+    width: 200px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 56px;
+    /* or 255% */
+    text-align: center;
+    color: #FFFFFF;
+    margin: auto;
+    padding: 10px 12px 0;
+    order: 0;
+    /*  not sure if we are to make the text wrap or use ellipsis here?*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+@media screen and (min-width : 1024px) {
+  .profile__name {
+      width:380px;
+      font-weight: 500;
+      font-size: 42px;
+      margin: 0;
+      padding: 0 24px 0 0;
+      text-align: left;
+      align-self: flex-end;
+    }
+}
