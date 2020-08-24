@@ -10,17 +10,20 @@ function PopupWithForm(props) {
       }
     
     const popup = (
-    <div onClick={handleOverlayClick} className={`popup popup_type_avatar ${props.isOpen ? 'popup_opened' : ''}`}>
+    <div onClick={handleOverlayClick} className={`popup popup_type_${props.name} ${props.isOpen ? 'popup_opened' : ''}`}>
       <div className="popup__container">
         <button className="popup__close-button" onClick={props.onClose}></button>
-        <h2 className="popup__title">Change profile picture</h2>
-        {props.children}
+        <h2 className="popup__title">{props.title}</h2>
+        <form action="#" className="form" name={props.name} onSubmit={props.onSubmit} noValidate>
+            {props.children}
+            <button type="submit" className="form__submit-button">{props.submitBtnText}</button>
+        </form>
       </div>
     </div>
     )
-  return ReactDOM.createPortal(
-     popup, document.getElementById("modal-root")
-  );
+    return ReactDOM.createPortal(
+         popup, document.getElementById("modal-root")
+    );
 }
 
 

@@ -86,7 +86,7 @@ class Api {
         }); 
     }
     
-    deleteCard({_id}){
+    deleteCard(_id){
         return fetch(`${this.baseUrl}/cards/${_id}`, {
             headers: this.headers,
             method: "DELETE"
@@ -102,10 +102,10 @@ class Api {
         }); 
     }
     
-    updateLike({cardIsLiked, _id}){
-        return fetch(`${this.baseUrl}/cards/likes/${_id}`, {
+    updateLike(cardId, isLiked){
+        return fetch(`${this.baseUrl}/cards/likes/${cardId}`, {
             headers: this.headers,
-            method: cardIsLiked ? 'PUT' : 'DELETE'
+            method: isLiked ? 'PUT' : 'DELETE'
         })
         .then((res) => {
             if (res.ok) {
