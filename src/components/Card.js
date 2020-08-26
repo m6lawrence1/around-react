@@ -27,13 +27,17 @@ function Card(props) {
     
     function handleLikeClick(evt) {
         evt.stopPropagation();
+        // Prevent the browser from navigating to the form address
         evt.preventDefault();
+        // Pass card data of the managed components to the external handler
         props.onCardLike(props.card);
     }
-    
+        
     function handleCardDelete(evt) {
         evt.stopPropagation();
+        // Prevent the browser from navigating to the form address
         evt.preventDefault();
+        // Pass the card data of the managed components to the external handler
         props.onCardDelete(props.card);
     }
 
